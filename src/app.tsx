@@ -1,17 +1,18 @@
 import './app.css'
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import Amplitude from "amplitudejs";
-import {Album, Song} from "./types/album.ts";
-import Playlist from "./components/playlist.tsx";
+import {Song} from "./types/album.ts";
+
+// import Playlist from "./components/playlist.tsx";
 
 function App() {
-  const [album, setAlbum] = useState<Album | null>(null);
-  const [showPlaylist, setShowPlaylist] = useState(false);
+  // const [album, setAlbum] = useState<Album | null>(null);
+  // const [showPlaylist, setShowPlaylist] = useState(false);
 
   useEffect(() => {
     fetch("/album.json").then(async (response) => {
       const album = await response.json();
-      setAlbum(album);
+      // setAlbum(album);
       Amplitude.init({
         "songs": album.songs.map((song: Song) => ({
           "name": song.title,
@@ -24,13 +25,13 @@ function App() {
     })
   }, []);
 
-  const openPlaylist = () => {
-    setShowPlaylist(true);
-  }
-
-  const closePlaylist = () => {
-    setShowPlaylist(false);
-  }
+  // const openPlaylist = () => {
+  //   setShowPlaylist(true);
+  // }
+  //
+  // const closePlaylist = () => {
+  //   setShowPlaylist(false);
+  // }
 
   return (
     <div className="container">
