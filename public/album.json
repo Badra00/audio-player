@@ -1,19 +1,19 @@
 {
   "name": "Album",
   "artist": "Artist",
-  "thumbnail": "/thumbnail.jpg",
+  "thumbnail": "/audio-player/thumbnail.jpg",
   "songs": [
     {
       "title": "Ave Maria",
-      "url": "/titre01.wav"
+      "url": "/audio-player/titre01.wav"
     },
     {
       "title": "Irons-nous",
-      "url": "/titre02.wav"
+      "url": "/audio-player/titre02.wav"
     },
     {
       "title": "Higher",
-      "url": "/titre03.wav"
+      "url": "/audio-player/titre03.wav"
     }
   ]
 }

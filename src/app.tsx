@@ -10,7 +10,7 @@ function App() {
   // const [showPlaylist, setShowPlaylist] = useState(false);
 
   useEffect(() => {
-    fetch("/album.json").then(async (response) => {
+    fetch(`/audio-player/album.json`).then(async (response) => {
       const album = await response.json();
       // setAlbum(album);
       Amplitude.init({
